@@ -1,4 +1,8 @@
 import hPerson from "../assets/home/hPerson.svg";
+import person from "../assets/home/person.svg";
+import location from "../assets/home/location.svg";
+import sv from "../assets/home/sv.svg";
+
 const Home = () => {
     return (
         <div className="container mx-auto max-w mt-20">
@@ -17,21 +21,21 @@ const Home = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4 sm:m-6 md:m-10 p-4 sm:p-6 md:p-10 border rounded-xl shadow-md">
                 <div className="flex items-center justify-center border-b sm:border-b-0 sm:border-r border-gray-300 pb-4 sm:pb-0 sm:pr-4">
-                    <img className="bg-[#FFECEC] rounded-full p-4" src="src/assets/home/person.svg" alt="" />
+                    <img className="bg-[#FFECEC] rounded-full p-4" src={person} alt="" />
                     <div className="ml-4 sm:ml-7">
                         <h3 className="text-xl font-bold">90+</h3>
                         <p>Users</p>
                     </div>
                 </div>
                 <div className="flex items-center justify-center border-b sm:border-b-0 sm:border-r border-gray-300 pb-4 sm:pb-0 sm:pr-4">
-                    <img className="bg-[#FFECEC] rounded-full p-4" src="src/assets/home/location.svg" alt="" />
+                    <img className="bg-[#FFECEC] rounded-full p-4" src={location} alt="" />
                     <div className="ml-4 sm:ml-7">
                         <h3 className="text-xl font-bold">30+</h3>
                         <p>Locations</p>
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
-                    <img className="bg-[#FFECEC] rounded-full p-4" src="src/assets/home/sv.svg" alt="" />
+                    <img className="bg-[#FFECEC] rounded-full p-4" src={sv} alt="" />
                     <div className="ml-4 sm:ml-7">
                         <h3 className="text-xl font-bold">50+</h3>
                         <p>Servers</p>
