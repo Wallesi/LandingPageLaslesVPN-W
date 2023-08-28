@@ -9,7 +9,7 @@ const Home = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 p-4">
-                    <img className="max-w-full" src="../src/assets/home/hPerson.svg" alt="Imagen de humano con notebook" />
+                    <img className="max-w-full" src="public/hPerson.svg" alt="Imagen de humano con notebook" />
                 </div>
             </div>
 
