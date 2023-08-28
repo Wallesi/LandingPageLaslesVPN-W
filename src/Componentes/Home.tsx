@@ -1,3 +1,4 @@
+import home from "dist/assets/home.svg";
 
 const Home = () => {
     return (
@@ -10,7 +11,7 @@ const Home = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 p-4">
-                    <img className="max-w-full" src="dist/assets/home.svg" alt="Imagen de humano con notebook" />
+                    <img className="max-w-full" src={home} alt="Imagen de humano con notebook" />
                 </div>
             </div>
 
