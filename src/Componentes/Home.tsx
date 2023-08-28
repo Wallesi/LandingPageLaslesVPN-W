@@ -3,6 +3,7 @@ import person from "../assets/home/person.svg";
 import location from "../assets/home/location.svg";
 import sv from "../assets/home/sv.svg";
 
+
 const Home = () => {
     return (
         <div className="container mx-auto max-w mt-20">

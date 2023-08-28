@@ -1,3 +1,7 @@
+import insta from "../assets/footer/instagram.svg";
+import face from "../assets/footer/facebook.svg";
+import twitter from "../assets/footer/twitter.svg";
+
 const Footer = () => {
     return (
         <div className="flex flex-col pb-10" style={{ background: 'linear-gradient(to top, #F8F8F8 75%, transparent 70%)' }}>
@@ -61,11 +65,11 @@ const Footer = () => {
                         has unique features and has high security.
                     </p>
                     <div className="flex mt-5">
-                        <img src="src/assets/footer/facebook.svg" alt="" />
+                        <img src={face} alt="" />
 
-                        <img src="src/assets/footer/twitter.svg" alt="" />
+                        <img src={twitter} alt="" />
 
-                        <img src="src/assets/footer/instagram.svg" alt="" />
+                        <img src={insta} alt="" />
 
                     </div>
                     <p className="text-sm text-slate-500">©Waldemar Galizzi</p>

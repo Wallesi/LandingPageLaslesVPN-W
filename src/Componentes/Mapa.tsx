@@ -1,3 +1,6 @@
+import mapa from "../assets/map.svg";
+import apps from "../assets/apps.svg";
+
 const Mapa = () => {
     return (
         <div className="container mx-auto max-w-8">
@@ -7,9 +10,9 @@ const Mapa = () => {
             <h4 className="text-lg md:text-xl mt-10 md:mt-10 text-[#4F5665]">See <span className="font-bold">LaslesVPN</span> everywhere to make it easier for you when you</h4>
             <h4 className="text-lg md:text-xl text-[#4F5665]">move locations.</h4>
 
-            <img className="w-full md:max-w-full mt-6 md:mt-10 mb-6 md:mb-10" src="src/assets/map.svg" alt="map" />
+            <img className="w-full md:max-w-full mt-6 md:mt-10 mb-6 md:mb-10" src={mapa} alt="map" />
 
-            <img className="w-full md:max-w-full" src="src/assets/apps.svg" alt="" />
+            <img className="w-full md:max-w-full" src={apps} alt="" />
         </div>
         </div>
     );

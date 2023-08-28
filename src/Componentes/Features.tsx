@@ -1,3 +1,5 @@
+import features from "../assets/features.svg";
+
 const Features = () => {
     return (
 
@@ -6,7 +8,7 @@ const Features = () => {
         <div className="flex flex-col md:flex-row p-4 md:m-10">
 
             <div className="w-full md:w-1/2 p-5">
-                <img className="max-w-full" src="src/assets/features.svg" alt="" />
+                <img className="max-w-full" src={features} alt="" />
             </div>
 
             <div className="w-full md:w-1/2 p-5">

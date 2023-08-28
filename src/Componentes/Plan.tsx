@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BDD_URL } from "../App";
+import box from "../assets/Plan/box.svg";
 
 type Subscription = {
   title: string;
@@ -35,7 +36,7 @@ const Plan = () => {
         {sub.map((subscription) => (
           <div className="flex flex-col p-6 md:p-16 bg-white shadow-md items-center rounded-lg" key={subscription.title}>
 
-            <img src="src/assets/Plan/box.svg" alt="Imagen 3" className="mb-4 max-w-full" />
+            <img src={box} alt="Imagen 3" className="mb-4 max-w-full" />
 
             <h2 className="mt-5 text-xl font-medium mb-4">{subscription.title}</h2>
 

@@ -2,6 +2,9 @@ import { useEffect, useState, useRef } from "react";
 import { BDD_URL } from "../App";
 import Slider from "react-slick";
 
+import rA from "../assets/rightA.svg";
+import lA from "../assets/leftA.svg";
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -110,10 +113,10 @@ const TarjetaCarrousel = () => {
 
       <div className="flex justify-end items-center mt-4 pr-2 pt-5">
         <button onClick={prevSlide}>
-          <img className="border border-[#F53838] p-2 rounded-full" src="src/assets/leftA.svg" alt="" />
+          <img className="border border-[#F53838] p-2 rounded-full" src={lA} alt="" />
         </button>
         <button className="ml-5" onClick={nextSlide}>
-          <img className="border border-[#F53838] p-2 rounded-full" src="src/assets/rightA.svg" alt="" />
+          <img className="border border-[#F53838] p-2 rounded-full" src={rA} alt="" />
         </button>
       </div>
 

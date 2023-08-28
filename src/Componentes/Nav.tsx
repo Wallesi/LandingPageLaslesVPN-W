@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const NavBar = () => {
     const [menu, setMenu] = useState(false);
 
