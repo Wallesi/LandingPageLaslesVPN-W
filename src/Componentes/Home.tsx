@@ -1,3 +1,4 @@
+
 const Home = () => {
     return (
         <div className="container mx-auto max-w mt-20">
@@ -9,7 +10,7 @@ const Home = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 p-4">
-                    <img className="max-w-full" src="src/assets/home.svg" alt="Imagen de humano con notebook" />
+                    <img className="max-w-full" src="dist/assets/home.svg" alt="Imagen de humano con notebook" />
                 </div>
             </div>
 
