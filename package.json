@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.0",
+    "boxicons": "^2.1.4",
     "netlify": "^13.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-ionicons": "^4.2.1",
+    "react-ionicons": "^1.4.6",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

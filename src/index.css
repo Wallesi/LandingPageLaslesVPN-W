@@ -15,3 +15,21 @@
 .button-color-basic{
     color: #F53855;
 }
+
+.boton-fondo:hover{
+  background-color: #F53855;
+  color: white;
+  transition: 1s;
+}
+
+.boton-fondo2:hover{
+  background-color: lightslategrey;
+  color: white;
+  transition: 1s;
+}
+
+li:hover{
+  cursor: pointer;
+  color: #F53855;
+  transition: 0.5s;
+}

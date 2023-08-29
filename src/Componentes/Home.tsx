@@ -4,14 +4,16 @@ import location from "../assets/home/location.svg";
 import sv from "../assets/home/sv.svg";
 
 
+
+
 const Home = () => {
     return (
-        <div className="container mx-auto max-w mt-20">
+        <div className="container mx-auto max-w mt-5 md:mt-20">
             <div className="flex flex-col md:flex-row p-4">
                 <div className="w-full md:w-1/2 p-4 md:p-5">
                     <h1 className="text-3xl md:text-4xl pt-3 font-medium">Want anything to be easy with <span className="font-bold">LaslesVPN.</span></h1>
                     <p className="mt-4 md:mt-10 text-base text-[#4F5665]">Provide a network for all your needs with ease and fun using <span className="font-bold">LaslesVPN</span> discover interesting features from us.</p>
-                    <button className="mt-6 md:mt-10 bg-red-400 font-semibold text-base text-white border px-4 py-3 rounded-md cursor-pointer pl-6 pr-6 md:pl-10 md:pr-10">Get Started</button>
+                    <button className="mt-6 md:mt-10 bg-red-400 font-semibold text-base text-white border px-4 py-3 rounded-md cursor-pointer pl-6 pr-6 md:pl-10 md:pr-10 boton-fondo2">Get Started</button>
                 </div>
 
                 <div className="w-full md:w-1/2 p-4">

@@ -112,10 +112,10 @@ const TarjetaCarrousel = () => {
       </Slider>
 
       <div className="flex justify-end items-center mt-4 pr-2 pt-5">
-        <button onClick={prevSlide}>
+        <button className="pointer" onClick={prevSlide}>
           <img className="border border-[#F53838] p-2 rounded-full" src={lA} alt="" />
         </button>
-        <button className="ml-5" onClick={nextSlide}>
+        <button className="ml-5 pointer" onClick={nextSlide}>
           <img className="border border-[#F53838] p-2 rounded-full" src={rA} alt="" />
         </button>
       </div>
