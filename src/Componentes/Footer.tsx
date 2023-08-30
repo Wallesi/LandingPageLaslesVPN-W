@@ -2,61 +2,18 @@ import insta from "../assets/footer/instagram.svg";
 import face from "../assets/footer/facebook.svg";
 import twitter from "../assets/footer/twitter.svg";
 
-//Yup
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { BDD_URL } from "../App";
-
-//Defino esquema para validar los campos de mi form
-const schema = yup.object({
-    firstName: yup.string().required("First Name is required").max(20, "Max of 20 characters"),
-    lastName: yup.string().required("Last Name is required").max(10, "Max of 10 characters"),
-    email: yup.string().required("Email is required").max(30, "Max of 30 characters"),
-    phone: yup.string().required("Cell phone is required").max(15, "Max of 15 characters"),
-    message: yup.string().required("Message is required").max(200, "Max of 200 characters"),
-}).required();
-
-//Infiero el tipo de dato
-type FormData = yup.InferType<typeof schema>;
-
+import useSendMessage from "../Hooks/use-SendEmail";
 
 //Separar el form del footer. Luego pasarlo a hook
 const Footer = () => {
 
     const {
+        onSubmit,
+        errors,
         register,
         handleSubmit,
-        formState: { errors },
-      } = useForm({
-        resolver: yupResolver(schema),
-      });
-
+      }=useSendMessage();
     
-    //Func para realizar el post sobre los datos ingresados
-    const onSubmit = (data: FormData) => {
-        fetch(`${BDD_URL}/api/send-email`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    console.log('Formulario enviado', response.json());
-                } else {
-                    console.error('Error al enviar');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }
-
-    
-
-
 
     return (
         <div className="flex flex-col pb-10" style={{ background: 'linear-gradient(to top, #F8F8F8 75%, transparent 70%)' }}>
@@ -88,12 +45,12 @@ const Footer = () => {
                             <div className="flex gap-4 ">
                                 <div className="w-1/2">
                                     <label htmlFor="from">Email</label>
-                                    <input type="text" id="from" placeholder="philcollins@gmail.com" className="w-full text-sm border rounded-md px-2 py-1" {...register("email")} />
+                                    <input type="email" id="from" placeholder="philcollins@gmail.com" className="w-full text-sm border rounded-md px-2 py-1" {...register("email")} />
                                     <p className="font-red">{errors.email?.message}</p>
                                 </div>
                                 <div className="w-1/2">
                                     <label htmlFor="from">Cell Phone</label>
-                                    <input type="text" id="from" placeholder="+54 342 5990801" className="w-full text-sm border rounded-md px-2 py-1"  {...register("phone")} />
+                                    <input type="number" id="from" placeholder="+54 342 5990801" className="w-full text-sm border rounded-md px-2 py-1"  {...register("phone")} />
                                     <p>{errors.phone?.message}</p>
                                 </div>
                             </div>
