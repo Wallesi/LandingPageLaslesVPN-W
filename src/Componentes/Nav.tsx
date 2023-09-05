@@ -22,13 +22,13 @@ const NavBar = () => {
                     </div>
 
                     <div className="flex items-center">
-                        <span onClick={ocultarMenu} className="md:hidden ">
+                        <span  onClick={ocultarMenu} className="md:hidden dark:bg-slate-300 dark:rounded-full dark:p-2">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/>
                         </span>
                     </div>
                 </div>
 
-                <ul className={`flex ${menu ? "block" : "hidden"} md:flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0 text-[#4F5665] mb-2 `}>
+                <ul className={` dark:text-white flex ${menu ? "block" : "hidden"} md:flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0 text-[#4F5665] mb-2 `}>
                     <li className="text-base cursor-pointer md:last-child:mb-0">About</li>
                     <li className="text-base cursor-pointer md:last-child:mb-0">Features</li>
                     <li className="text-base cursor-pointer md:last-child:mb-0">Pricing</li>

@@ -46,7 +46,7 @@ const TarjetaCarrousel = () => {
     infinite: true,
     slidesToShow: 2, // Muestra 2 tarjetas por slide
     slidesToScroll: 2, // Desplaza de a 2 tarjetas
-    dots: true, // 
+    dots: false, // 
     responsive: [
       {
         breakpoint: 768,
@@ -68,8 +68,8 @@ const TarjetaCarrousel = () => {
 
         <h1 className="text-3xl md:text-4xl font-medium text-center">Trusted by Thousands of</h1>
         <h1 className="text-3xl md:text-4xl font-medium text-center"> Happy Customer</h1>
-        <p className="text-lg md:text-xl mt-10 md:mt-10 text-center text-[#4F5665]">These are the stories of our customers who have joined us with great</p>
-        <p className="text-lg md:text-xl text-center text-[#4F5665]">pleasure when using this crazy feature.</p>
+        <p className="dark:text-slate-400 text-lg md:text-xl mt-10 md:mt-10 text-center text-[#4F5665]">These are the stories of our customers who have joined us with great</p>
+        <p className="dark:text-slate-400 text-lg md:text-xl text-center text-[#4F5665]">pleasure when using this crazy feature.</p>
 
       </div>
 
@@ -77,7 +77,7 @@ const TarjetaCarrousel = () => {
       <Slider ref={sliderRef} className="" {...settings}> {/* Usa el componente Slider con las configuraciones */}
         {test.map((testimonial) => (
           <div className="p-2" key={testimonial.avatar}>
-            <div className="bg-white rounded-lg shadow-md p-6" style={{ marginRight: "5px", height: "220px" }} key={testimonial.avatar}>
+            <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6" style={{ marginRight: "5px", height: "230px" }} key={testimonial.avatar}>
 
               <div className="flex">
                 <div className="w-12 h-12 overflow-hidden rounded-full">
@@ -89,7 +89,7 @@ const TarjetaCarrousel = () => {
                 </div>
                 <div className="ml-2 flex-grow items-center">
                   <h2 className="text-sm font-semibold">{testimonial.fullName}</h2>
-                  <p className="text-[#4F5665] text-sm">Warzaw, Poland</p>
+                  <p className="dark:text-slate-400 text-[#4F5665] text-sm">Warzaw, Poland</p>
                 </div>
                 <div className="text-sm font-semibold flex items-center">
                   4.5
@@ -101,7 +101,7 @@ const TarjetaCarrousel = () => {
 
               </div>
 
-              <p className="mt-4 text-base text-[#4F5665]">
+              <p className="dark:text-slate-400 mt-4 text-base text-[#4F5665]">
                 {testimonial.testimonial}
               </p>
 

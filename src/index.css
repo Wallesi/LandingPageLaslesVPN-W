@@ -33,3 +33,7 @@ li:hover{
   color: #F53855;
   transition: 0.5s;
 }
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
