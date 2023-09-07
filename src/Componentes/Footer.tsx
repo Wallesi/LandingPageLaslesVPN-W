@@ -4,16 +4,17 @@ import twitter from "../assets/footer/twitter.svg";
 
 import useSendMessage from "../Hooks/sendEmail";
 
-//Separar el form del footer. Luego pasarlo a hook
-const Footer = () => {
 
+const Footer = () => {
+    
     const {
+        aux,
         onSubmit,
         errors,
         register,
         handleSubmit,
       }=useSendMessage();
-    
+      console.log(aux);
 
     return (                                                 
         <div className="flex flex-col pb-10 bg-gradient-to-t from-gray-200 via-transparent to-transparent dark:from-slate-800 dark:via-transparent dark:to-transparent" >
@@ -30,12 +31,12 @@ const Footer = () => {
                             <div className="flex gap-4 ">
                                 <div className="w-1/2">
                                     <label htmlFor="first-name">First Name</label>
-                                    <input type="text" id="first-name" placeholder="Phil" className="w-full border text-sm rounded-md px-2 py-1" {...register("firstName")} />
+                                    <input type="text" id="first-name" placeholder="Phil" className="w-full border text-sm rounded-md px-2 py-1  text-slate-900" {...register("firstName")} />
                                     <p>{errors.firstName?.message}</p>
                                 </div>
                                 <div className="w-1/2">
                                     <label htmlFor="last-name">Last Name</label>
-                                    <input type="text" id="last-name" placeholder="Collins" className="w-full border text-sm rounded-md px-2 py-1"  {...register("lastName")} />
+                                    <input type="text" id="last-name" placeholder="Collins" className="w-full border text-sm rounded-md px-2 py-1 text-slate-900"  {...register("lastName")} />
                                     <p>{errors.lastName?.message}</p>
                                 </div>
                             </div>
@@ -45,18 +46,18 @@ const Footer = () => {
                             <div className="flex gap-4 ">
                                 <div className="w-1/2">
                                     <label htmlFor="from">Email</label>
-                                    <input type="email" id="from" placeholder="philcollins@gmail.com" className="w-full text-sm border rounded-md px-2 py-1" {...register("email")} />
+                                    <input type="email" id="from" placeholder="philcollins@gmail.com" className="w-full text-sm border rounded-md px-2 py-1  text-slate-900" {...register("email")} />
                                     <p className="font-red">{errors.email?.message}</p>
                                 </div>
                                 <div className="w-1/2">
                                     <label htmlFor="from">Cell Phone</label>
-                                    <input type="number" id="from" placeholder="+54 342 5990801" className="w-full text-sm border rounded-md px-2 py-1"  {...register("phone")} />
+                                    <input type="number" id="from" placeholder="+54 342 5990801" className="w-full text-sm border rounded-md px-2 py-1  text-slate-900"  {...register("phone")} />
                                     <p>{errors.phone?.message}</p>
                                 </div>
                             </div>
                             <div className="mt-4">
                                 <label htmlFor="message">Message</label>
-                                <textarea id="message" placeholder="Message" className="w-full text-sm border rounded-md px-2 py-1 resize-y min-h-[3rem]"  {...register("message")} />
+                                <textarea id="message" placeholder="Message" className="w-full text-sm border rounded-md px-2 py-1 resize-y min-h-[3rem]  text-slate-900"  {...register("message")} />
                                 <p>{errors.message?.message}</p>
                             </div>
                         </div>
@@ -64,10 +65,12 @@ const Footer = () => {
                 
 
                 <div className="flex justify-center mt-8">
-                    <button className="bg-[#F53838] border w-1/2 pt-3 pb-3 pl-10 pr-10 rounded-xl text-white font-semibold text-sm boton-fondo2" type="submit" value="Send">Submit</button>
+                    <button className="bg-[#F53838] border w-1/2 pt-3 pb-3 pl-10 pr-10 rounded-xl text-white font-semibold text-sm boton-fondo2 " type="submit" value="Send">Submit</button>
                 </div>
+                {aux && <div className="text-center mt-5">Thank for contact us!<h1></h1></div>}
                 </form>
                 </div>
+                
             </div>
 
 

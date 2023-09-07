@@ -7,6 +7,7 @@ import Footer from "./Componentes/Footer";
 import TarjetaSlider from "./Componentes/TarjetaCarrousel";
 import DarkMode from "./Componentes/NightMode";
 
+
 export const BDD_URL = "https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <Mapa></Mapa>
       <DarkMode></DarkMode>
       <TarjetaSlider></TarjetaSlider>
-      <Footer ></Footer>
+      <Footer></Footer>
     </div>
 
   );
