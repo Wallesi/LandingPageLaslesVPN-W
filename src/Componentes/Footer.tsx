@@ -2,7 +2,7 @@ import insta from "../assets/footer/instagram.svg";
 import face from "../assets/footer/facebook.svg";
 import twitter from "../assets/footer/twitter.svg";
 
-import useSendMessage from "../Hooks/use-SendEmail";
+import useSendMessage from "../Hooks/sendEmail";
 
 //Separar el form del footer. Luego pasarlo a hook
 const Footer = () => {
