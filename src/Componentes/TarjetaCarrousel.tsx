@@ -26,7 +26,7 @@ const TarjetaCarrousel = () => {
           setTest(result);
         })
       })
-  });
+  },[]);
   //botones slider
   const nextSlide = () => {
     if (sliderRef.current) {
